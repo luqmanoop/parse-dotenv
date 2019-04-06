@@ -2,15 +2,24 @@
   "name": "parse-env",
   "version": "1.0.0",
   "description": "Zero dependency .env to object parser",
-  "main": "lib.js",
+  "source": "lib/lib.js",
+  "main": "parse-env.js",
+  "module": "parse-env.mjs",
   "scripts": {
-    "build": "babel lib -d build",
+    "build": "npm run clean && babel lib -d build",
+    "bundle": "npm run build && microbundle -o dist -f es,cjs --target node --compress",
+    "clean": "rimraf build dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codeshifu/parse-env.git"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.md"
+  ],
   "keywords": [
     "env",
     "env object",
@@ -28,6 +37,8 @@
     "@babel/core": "7.4.3",
     "@babel/preset-env": "7.4.3",
     "@babel/preset-flow": "7.0.0",
-    "flow-bin": "0.96.0"
+    "flow-bin": "0.96.0",
+    "microbundle": "0.11.0",
+    "rimraf": "2.6.3"
   }
 }
