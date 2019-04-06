@@ -9,7 +9,7 @@
     "build": "npm run clean && babel lib -d build",
     "bundle": "npm run build && microbundle -o dist -f es,cjs --target node --compress",
     "clean": "rimraf build dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc --reporter=html mocha"
   },
   "repository": {
     "type": "git",
@@ -37,8 +37,14 @@
     "@babel/core": "7.4.3",
     "@babel/preset-env": "7.4.3",
     "@babel/preset-flow": "7.0.0",
+    "@babel/register": "7.4.0",
+    "chai": "4.2.0",
     "flow-bin": "0.96.0",
     "microbundle": "0.11.0",
-    "rimraf": "2.6.3"
+    "mocha": "6.0.2",
+    "nyc": "13.3.0",
+    "rimraf": "2.6.3",
+    "sinon": "7.3.1",
+    "sinon-chai": "3.3.0"
   }
 }
