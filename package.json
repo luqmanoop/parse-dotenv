@@ -3,8 +3,8 @@
 	"version": "1.0.2",
 	"description": "Zero dependency .env to object parser",
 	"source": "lib/lib.js",
-	"main": "parse-dotenv.js",
-	"module": "parse-dotenv.mjs",
+	"main": "dist/parse-dotenv.js",
+	"module": "dist/parse-dotenv.mjs",
 	"scripts": {
 		"build": "npm run clean && babel lib -d build",
 		"bundle": "npm run build && microbundle -o dist -f es,cjs --target node --compress",
