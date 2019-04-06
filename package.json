@@ -10,7 +10,9 @@
 		"bundle": "npm run build && microbundle -o dist -f es,cjs --target node --compress",
 		"clean": "rimraf build dist",
 		"coverage": "nyc report --reporter=text-lcov | coveralls",
-		"test": "nyc --reporter=html --reporter=text mocha"
+		"test": "nyc --reporter=html --reporter=text mocha",
+		"prepare": "npm run bundle",
+		"release": "np"
 	},
 	"repository": {
 		"type": "git",
@@ -44,6 +46,7 @@
 		"flow-bin": "0.96.0",
 		"microbundle": "0.11.0",
 		"mocha": "6.0.2",
+		"np": "3.1.0",
 		"nyc": "13.3.0",
 		"rimraf": "2.6.3",
 		"sinon": "7.3.1",

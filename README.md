@@ -4,3 +4,64 @@
 
 ![Travis (.org)](https://img.shields.io/travis/codeshifu/parse-env.svg)
 [![Coverage Status](https://coveralls.io/repos/github/codeshifu/parse-env/badge.svg?branch=master)](https://coveralls.io/github/codeshifu/parse-env?branch=master)
+
+# Installation
+
+```bash
+npm install parse-env --save
+```
+
+# Usage
+
+```bash
+# .env
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+```
+
+```javascript
+import parseEnv from 'parse-env';
+
+const parsed = parseEnv();
+
+console.log(parsed.DB_CONNECTION); // mysql
+```
+
+or provide a path (relative to project root) to env
+
+```javascript
+const parseEnv = require('parse-env');
+
+const parsed = parseEnv('.env.example');
+console.log(parsed.DB_PORT); // 3306
+```
+
+# API
+
+## path
+
+Type: `string`
+
+Default: `path.resolve(process.cwd(), '.env')`
+
+## opts
+
+Type: `Object`
+
+#### opts.emptyLines
+
+Type: `boolean`
+
+Default: false
+
+```javascript
+{
+  emptyLines: false; // ignore empty lines in env
+}
+```
+
+# LICENSE
+
+This project is licensed under [MIT](https://github.com/codeshifu/parse-env/blob/master/LICENSE)
