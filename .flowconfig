@@ -1,0 +1,12 @@
+[ignore]
+
+[include]
+<PROJECT_ROOT>/lib/**/*.js
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]
