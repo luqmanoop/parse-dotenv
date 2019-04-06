@@ -1,7 +1,7 @@
 {
   "name": "parse-env",
   "version": "1.0.0",
-  "description": "Parse .env to javascript object",
+  "description": "Zero dependency .env to object parser",
   "main": "lib.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

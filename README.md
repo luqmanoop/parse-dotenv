@@ -1,2 +1,3 @@
 # parse-env
-Parse .env to javascript object
+
+> Zero dependency .env to object parser
