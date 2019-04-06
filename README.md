@@ -1,17 +1,17 @@
-# parse-env
+# parse-dotenv
 
-> Zero dependency .env to object parser
+> Zero dependency .env to javascript object parser
 
 ![Travis (.org)](https://img.shields.io/travis/codeshifu/parse-env.svg)
 [![Coverage Status](https://coveralls.io/repos/github/codeshifu/parse-env/badge.svg?branch=master)](https://coveralls.io/github/codeshifu/parse-env?branch=master)
 
-# Installation
+## Installation
 
 ```bash
-npm install parse-env --save
+npm install parse-dotenv --save
 ```
 
-# Usage
+## Usage
 
 ```bash
 # .env
@@ -22,7 +22,7 @@ DB_PORT=3306
 ```
 
 ```javascript
-import parseEnv from 'parse-env';
+import parseEnv from 'parse-dotenv';
 
 const parsed = parseEnv();
 
@@ -32,21 +32,21 @@ console.log(parsed.DB_CONNECTION); // mysql
 or provide a path (relative to project root) to env
 
 ```javascript
-const parseEnv = require('parse-env');
+const parseEnv = require('parse-dotenv');
 
 const parsed = parseEnv('.env.example');
 console.log(parsed.DB_PORT); // 3306
 ```
 
-# API
+## API
 
-## path
+### path
 
 Type: `string`
 
 Default: `path.resolve(process.cwd(), '.env')`
 
-## opts
+### opts
 
 Type: `Object`
 
@@ -62,6 +62,6 @@ Default: false
 }
 ```
 
-# LICENSE
+## LICENSE
 
 This project is licensed under [MIT](https://github.com/codeshifu/parse-env/blob/master/LICENSE)

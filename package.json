@@ -1,10 +1,10 @@
 {
-	"name": "parse-env",
+	"name": "parse-dotenv",
 	"version": "1.0.0",
 	"description": "Zero dependency .env to object parser",
 	"source": "lib/lib.js",
-	"main": "parse-env.js",
-	"module": "parse-env.mjs",
+	"main": "parse-dotenv.js",
+	"module": "parse-dotenv.mjs",
 	"scripts": {
 		"build": "npm run clean && babel lib -d build",
 		"bundle": "npm run build && microbundle -o dist -f es,cjs --target node --compress",
@@ -27,7 +27,8 @@
 		"env",
 		"env object",
 		"parse env",
-		"env parser"
+		"env parser",
+		"dotenv"
 	],
 	"author": "Luqman Olushi <olushilukmon03@gmail.com> (https://codeshifu.github.io/)",
 	"license": "ISC",
