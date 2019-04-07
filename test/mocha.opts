@@ -1,2 +1,5 @@
---recursive
+test/**/*.spec.ts
+--watch-extensions ["ts"]
+--extensions ["ts"]
+--require ts-node/register
 --require @babel/register

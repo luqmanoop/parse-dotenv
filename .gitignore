@@ -63,3 +63,4 @@ typings/
 # builds
 build
 dist
+**/.rts*

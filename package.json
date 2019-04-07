@@ -2,11 +2,12 @@
 	"name": "parse-dotenv",
 	"version": "2.0.0",
 	"description": "Zero dependency .env to object parser",
-	"source": "lib/lib.js",
+	"source": "lib/parse-dotenv.ts",
 	"main": "dist/parse-dotenv.js",
 	"module": "dist/parse-dotenv.mjs",
+	"types": "dist/parse-dotenv.d.ts",
 	"scripts": {
-		"build": "npm run clean && babel lib -d build",
+		"build": "npm run clean && babel lib -d build --extensions .ts",
 		"bundle": "npm run build && microbundle -o dist -f es,cjs --target node --compress",
 		"clean": "rimraf build dist",
 		"coverage": "nyc report --reporter=text-lcov | coveralls",
@@ -28,7 +29,8 @@
 		"env object",
 		"parse env",
 		"env parser",
-		"dotenv"
+		"dotenv",
+		"dotenv parser"
 	],
 	"author": "Luqman Olushi <olushilukmon03@gmail.com> (https://codeshifu.github.io/)",
 	"license": "ISC",
@@ -39,18 +41,34 @@
 	"devDependencies": {
 		"@babel/cli": "7.4.3",
 		"@babel/core": "7.4.3",
+		"@babel/plugin-proposal-class-properties": "7.4.0",
+		"@babel/plugin-proposal-object-rest-spread": "7.4.3",
 		"@babel/preset-env": "7.4.3",
-		"@babel/preset-flow": "7.0.0",
+		"@babel/preset-typescript": "7.3.3",
 		"@babel/register": "7.4.0",
+		"@types/chai": "4.1.7",
+		"@types/mocha": "5.2.6",
+		"@types/sinon": "7.0.11",
+		"@types/sinon-chai": "3.2.2",
 		"chai": "4.2.0",
 		"coveralls": "3.0.3",
-		"flow-bin": "0.96.0",
 		"microbundle": "0.11.0",
 		"mocha": "6.0.2",
 		"np": "3.1.0",
 		"nyc": "13.3.0",
 		"rimraf": "2.6.3",
+		"rollup": "1.9.0",
 		"sinon": "7.3.1",
-		"sinon-chai": "3.3.0"
+		"sinon-chai": "3.3.0",
+		"ts-node": "8.0.3",
+		"typescript": "3.3.3"
+	},
+	"nyc": {
+		"extension": [
+			".ts"
+		],
+		"include": [
+			"**/lib/*.ts"
+		]
 	}
 }
