@@ -33,7 +33,7 @@
 		"dotenv parser"
 	],
 	"author": "Luqman Olushi <olushilukmon03@gmail.com> (https://codeshifu.github.io/)",
-	"license": "ISC",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/codeshifu/parse-dotenv/issues"
 	},
