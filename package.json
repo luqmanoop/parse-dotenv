@@ -17,7 +17,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/codeshifu/parse-env.git"
+		"url": "git+https://github.com/codeshifu/parse-dotenv.git"
 	},
 	"files": [
 		"dist",
@@ -35,9 +35,9 @@
 	"author": "Luqman Olushi <olushilukmon03@gmail.com> (https://codeshifu.github.io/)",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/codeshifu/parse-env/issues"
+		"url": "https://github.com/codeshifu/parse-dotenv/issues"
 	},
-	"homepage": "https://github.com/codeshifu/parse-env#readme",
+	"homepage": "https://github.com/codeshifu/parse-dotenv#readme",
 	"devDependencies": {
 		"@babel/cli": "7.4.3",
 		"@babel/core": "7.4.3",
