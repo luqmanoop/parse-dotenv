@@ -22,7 +22,7 @@ DB_PORT=3306
 ```
 
 ```javascript
-import parseEnv from 'parse-dotenv';
+import parseEnv from "parse-dotenv";
 
 const parsed = parseEnv();
 
@@ -32,9 +32,9 @@ console.log(parsed.DB_CONNECTION); // mysql
 or provide a path (relative to project root) to env
 
 ```javascript
-const parseEnv = require('parse-dotenv');
+const parseEnv = require("parse-dotenv");
 
-const parsed = parseEnv('.env.example');
+const parsed = parseEnv(".env.example");
 console.log(parsed.DB_PORT); // 3306
 ```
 
@@ -61,6 +61,11 @@ Default: false
   emptyLines: false; // ignore empty lines in env
 }
 ```
+
+## Related
+
+- [sync-dotenv](https://github.com/codeshifu/sync-dotenv) - Keep your .env in
+  sync with .env.example
 
 ## LICENSE
 
