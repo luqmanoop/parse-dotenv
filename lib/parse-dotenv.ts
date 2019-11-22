@@ -5,7 +5,8 @@ const DEFAULT_ENV_PATH = resolve(process.cwd(), '.env');
 const NEWLINE = '\n';
 
 interface Options {
-	emptyLines: boolean;
+	emptyLines?: boolean;
+	comments?: boolean;
 }
 
 interface EnvObject {
@@ -22,18 +23,21 @@ const parseEnv = (
 		});
 		const obj: EnvObject = {};
 		let newlineCount = 0;
+		let commentsCount = 0;
+
 		env
 			.split(NEWLINE)
 			.map(
 				(line): string[] => {
-					if (line) {
-						return line.split('=').map(kv =>
-							kv
-								.trim()
-								.replace(/^("|')/, '')
-								.replace(/("|')$/, '')
-						);
+					if (opts.comments && line.startsWith('#')) {
+						commentsCount += 1;
+						return [`__COMMENT_${commentsCount}__`, line];
 					}
+
+					if (line) {
+						return line.split('=').map(kv => kv.trim());
+					}
+
 					if (opts.emptyLines) {
 						newlineCount += 1;
 						return [`__EMPTYLINE_${newlineCount}__`, ''];
