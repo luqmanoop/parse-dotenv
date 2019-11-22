@@ -1,6 +1,6 @@
 {
 	"name": "parse-dotenv",
-	"version": "2.0.1",
+	"version": "2.1.0",
 	"description": "Zero dependency .env to object parser",
 	"source": "lib/parse-dotenv.ts",
 	"main": "dist/parse-dotenv.js",
