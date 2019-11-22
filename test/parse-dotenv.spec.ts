@@ -35,8 +35,13 @@ describe('parseEnv', () => {
 		expect(parsed).to.have.deep.property('DB_CONNECTION', 'mysql');
 	});
 
-	it('parse .env.example and include empty lnes', () => {
+	it('parse .env.example and include empty lines', () => {
 		const parsed = parseEnv('.env.example', { emptyLines: true });
 		expect(parsed).to.have.deep.property('__EMPTYLINE_1__', '');
+	});
+
+	it('parse .env.example and include empty lines', () => {
+		const parsed = parseEnv('.env.example', { comments: true });
+		expect(parsed).to.have.deep.property('__COMMENT_1__');
 	});
 });
