@@ -56,9 +56,25 @@ Type: `boolean`
 
 Default: false
 
+Parse empty lines in env file
+
 ```javascript
 {
-  emptyLines: false; // ignore empty lines in env
+  emptyLines: true; // parse empty lines in env
+}
+```
+
+#### opts.comments
+
+Type: `boolean`
+
+Default: false
+
+Parse empty lines in env file
+
+```javascript
+{
+  comments: true; // parse comments in env
 }
 ```
 
